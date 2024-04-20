@@ -532,6 +532,9 @@ void CollisionInfo::serializeToObj(std::vector<u8> &outObj, std::vector<u8> &out
 
     std::map<std::string, int> matNameUsedCnt;
 
+    // Write Vertices to .obj
+    for(int i = 0; i < gVert.m_size; i++) writeVertex(gVert[i][0], gVert[i][1], gVert[i][2]);
+
     for(int m = 0; m < mMaterials.size(); m++){
 
         auto &mat = mMaterials[m];
@@ -545,17 +548,7 @@ void CollisionInfo::serializeToObj(std::vector<u8> &outObj, std::vector<u8> &out
         snprintf(matId, sizeof(matId), "%s%i", matName.c_str(), matNameUsedCnt[matName]++);
 
         // Write Material to .obj
-        std::set<int> vertices;
-        for(int i = 0; i < gTri.m_size; i++){
-            if(gTri[i].m_material != m) continue;
-            vertices.insert(gTri[i].m_a);
-            vertices.insert(gTri[i].m_b);
-            vertices.insert(gTri[i].m_c);
-        }
-
         writeObject(matId);
-        for(auto &i: vertices) writeVertex(gVert[i][0], gVert[i][1], gVert[i][2]);
-
         writeMat(matId);
         for(int i = 0; i < gTri.m_size; i++){
             if(gTri[i].m_material != m) continue;

@@ -118,7 +118,7 @@ struct hknpMeshShape : public hknpCompositeShape {
 
         hkRelArrayView<hknpAabb8TreeNode, int> m_sectionBvh;
         hkRelArrayView<Primitive, int> m_primitives;
-        hkRelArrayView<hkUint8, int> m_vertexBuffer;
+        hkRelArrayView<Vertex16_3, int> m_vertexBuffer;
         hkRelArrayView<hkUint8, int> m_interiorPrimitiveBitField;
         hkUint32 m_sectionOffset[3];
         hkFloat3 m_bitScale8Inv;
