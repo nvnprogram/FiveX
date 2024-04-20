@@ -1,0 +1,31 @@
+{
+    "mat_names": [
+        "Undefined", "Character", "Water", "InkWater", "Ice", "Dirt", "Soil", "Wasteland", 
+        "Grass", "Cloth", "Carpet", "Rubber", "Vinyl", "Plastic", "Glass", "Wood", "Stone", 
+        "Asphalt", "Sand", "Metal", "IronSand", "Fence", "RopeNet", "Snow", "CoralSand", "KebaInk", 
+        "BlowerInhale", "Ink", "Barrier", "Shield", "ThrowingWeapon", "ExPaint", "LockerObj", 
+        "PlayerMammal", "Torpedo", "CoopFloat", "Ball", "BallEx", "BallGoal"
+    ],
+    "mat_flag_names": [
+        "Water", "Unridable", "BombBlast", "BombDead", "BombCantBind", "BombDamage", "BombFizzyDirectDamage", "UltraStampBlast", "UltraStampDead", 
+        "TripleTornadoDeviceBlast", "TripleTornadoDeviceDead", "TripleTornadoDeviceCantBind", "WashtubBlast", "NiceBallBombBlast", "PlaceWithMarginWeapon", 
+        "BulletCantMount", "SuperHookCantBind", "ActivateWallaObj", "DontRejectOverlapWallaObj", "GameUnridable", "SquidGuard", "Slide", "PlayerDead", 
+        "PlayerUnsafe", "IgnoreBackFace", "IgnoreDefiladeBackFace", "Fence", "Ice", "KeepOut", "FillUp", "KebaInkCore", "KebaInk", "Sponge", "Curb", 
+        "DisableSurfaceVelocity", "NoEffectHitBlower",  "CancelIgnoreBackFace", "IgnoreGreatBarrierDroneAscend", "CanopyKnockBackOwner", "ChargerGuide", "LockerMaterial_Metal", 
+        "LockerMaterial_Wood", "LockerMaterial_Plastic", "LockerMaterial_Glass", "LockerMaterial_Asplalt", "LockerMaterial_Cloth", "LockerMaterial_Rubber", 
+        "MiniMapOnly", "CoopEnemyGround", "ForceColPaintYPlus", "ForceColPaintPaintable", "ForceColPaintNotPaintable", "ForceColPaintIndependent", 
+        "ForceColPaintUnite", "IgnoredByNavMesh", "BakeNavMeshExtraData", "IgnoredByMiniMap", "IgnoreAlongGround", "IgnoreByCoopFloatEnemy"
+    ],
+    "col_disable_flag_names": [
+        "NoHit", "CustomReceiver", "GameCustomReceiver", "Ground", "Water", "SplPlayer", "SplPlayerChariotShield", 
+        "SplCamera", "SplInkBullet", "SplInkBullet_FriendThrough", "SplSubstanceBullet", "SplSubstanceBullet_HitOpposite", 
+        "SplSubstanceBullet_HitBullet", "SplSubstanceBullet_Lite", "SplRollerBody", "SplStationedWeapon", "SplInkShield", 
+        "SplBlowerInhale", "SplBluntWeapon", "SplInkFilm", "SplInkTornado", "SplGreatBarrier", "SplSaberBombGuard", 
+        "SplPaintSplash", "SplObject", "MissionEnemy", "SplCoopEnemy", "SplSdodrEnemy", "SplItem", "SplWallaObj", "Unspecified",
+        "Ground", "GroundObject", "SplPlayerHuman", "SplPlayerSquid_Visible", "SplPlayerSquid_Invisible", "SplPlayerSquid_NoThroughFence", 
+        "SplPlayerChariot", "SplPlayerChariotShield", "SplPlayerSuperHookCheck", "SplSalmonBuddy", "Sight", "Enemy", "EnemyLarge", 
+        "MissionEnemyHide", "EnemyHide", "NPC", "Shield", "HalfBrokenShield", "ForceField", "SubstanceBullet_Solid", 
+        "SubstanceBullet_Fragile", "PlayerCustomPartStandAlone", "SplEnergyStand", "SplUltraStamp", "SplSakelienBomberBody", 
+        "SplVehicleSpectacle", "SplSakeSaucer", "SplBall", "SplOverheadBullet"
+    ]
+}

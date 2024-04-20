@@ -1,0 +1,2 @@
+This is a collision config for a map from a WIP mod [Project Gander](https://gamebanana.com/wips/82862)
+You can use this as reference(and you can also convert a bphsh file into obj and json and use that json as reference).

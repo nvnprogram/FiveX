@@ -1,0 +1,192 @@
+{
+  "Fence": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "GraffitiSet00_np.285": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "MiiverseA00VSWall.001": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "CamaraWall.001": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "GroundsSndyBeach_sl.001": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "WallConcreteGrey.001": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "StageObj2.001": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "ObjSet00_gp.001": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "WallSteelSet.001": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "PondWater.026": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "ObjSet05.025": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "ObjSet04.025": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "GroundsSndyBeach_sl.026": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "GroundPlaster.026": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "RoofTopFence_ol.025": {
+    "mat_name": "Fence",
+    "mat_flags": [
+      "Fence"
+    ],
+    "col_disable_flags": [
+      "SplInkBullet",
+      "SplInkBullet_FriendThrough",
+      "SplPlayerSquid_NoThroughFence"
+    ]
+  },
+  "Grass.001": {
+    "mat_name": "Water",
+    "mat_flags": [
+      "IgnoredByMiniMap", 
+      "Water", 
+      "BombDead"
+    ],
+    "col_disable_flags": [
+      "SplPlayer"
+    ]
+  },
+  "Material.005": {
+    "mat_flags": ["IgnoredByMiniMap"]
+  },
+  "Material.008": {
+    "mat_flags": ["IgnoredByMiniMap"]
+  },
+  "epic1": {
+    "mat_name": "Wood",
+    "mat_flags": ["IgnoredByMiniMap, PlayerDead"]
+  },
+  "epic2": {
+    "mat_name": "Wood",
+    "mat_flags": ["IgnoredByMiniMap, PlayerDead"]
+  }
+}
