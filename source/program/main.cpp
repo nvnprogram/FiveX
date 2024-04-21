@@ -149,6 +149,7 @@ void appLoop(){
         FiveX::PhiveWriter writer;
         writer.serialize(shape);
 
+        shape->vftable->dtor0(shape);
         delete shape;
 
         FiveX::OutHeader resp(FiveX::RespType::Phive, writer.mData.size());
