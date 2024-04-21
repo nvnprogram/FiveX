@@ -13,7 +13,7 @@
 
 namespace exl::setting {
     /* How large the fake .bss heap will be. */
-    constexpr size_t HeapSize = 60 * 1024 * 1024; // 60mb
+    constexpr size_t HeapSize = 200 * 1024 * 1024; // 200mb
 
     /* How large the JIT area will be for hooks. */
     constexpr size_t JitSize = 0x1000;
