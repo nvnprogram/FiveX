@@ -167,16 +167,18 @@ void appLoop(){
 
         logF("Converting phive to .obj...");
         
-        if(shape == NULL){
+        if(shape->mShape == NULL){
             respondError("Failed to load the mesh shape from the .bphsh file!");
-            return;
-        }
-
-        FiveX::CollisionInfo *info = new FiveX::CollisionInfo();
-        if(!info->initialize(shape)){
             shape->vftable->dtor0(shape);
             delete shape;
+            return;
+        }
+        
+        FiveX::CollisionInfo *info = new FiveX::CollisionInfo();
+        if(!info->initialize(shape)){
             respondError("Failed to parse the mesh shape into geometry!");
+            shape->vftable->dtor0(shape);
+            delete shape;
             return;
         }
         
