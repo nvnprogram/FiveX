@@ -162,9 +162,8 @@ void appLoop(){
     if(msg.mOperationType == FiveX::OpType::PhiveToObj){
 
         Phive::PhiveMeshShape *shape = new Phive::PhiveMeshShape();
-        shape->vftable->load(shape, msgBuf, msg.mMessageSize, NULL);
-
-        free(msgBuf);
+        // shape is inplace loaded, so msgBuf has to be freed only after it's deinit
+        shape->vftable->load(shape, msgBuf, msg.mMessageSize, NULL); 
 
         logF("Converting phive to .obj...");
         
@@ -172,6 +171,7 @@ void appLoop(){
             respondError("Failed to load the mesh shape from the .bphsh file!");
             shape->vftable->dtor0(shape);
             delete shape;
+            free(msgBuf);
             return;
         }
         
@@ -180,11 +180,13 @@ void appLoop(){
             respondError("Failed to parse the mesh shape into geometry!");
             shape->vftable->dtor0(shape);
             delete shape;
+            free(msgBuf);
             return;
         }
         
         shape->vftable->dtor0(shape);
         delete shape;
+        free(msgBuf);
 
         std::vector<u8> objData;
         std::vector<u8> matData;
