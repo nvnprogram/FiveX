@@ -3,7 +3,7 @@ A Phive(physics system found in latest Nintendo games) converter, targeting Spla
 It can convert .bphsh files into .obj + material info json and vice versa.
 
 # Usage tutorial
-1. Install Splatoon 3 **v1.0.0**(in the future i may add auto port to make all versions useable) on Ryujinx
+1. Install Splatoon 3 **v1.0.0** or **v1.1.0** on Ryujinx
 2. Right click the game, open mods and put the **fivex** folder from the release zip into **the mods folder for the game** (make sure you do not have code mods like Flexlion installed)
 3. Make sure **guest internet access** is enabled on Ryujinx.
 4. Run the game. If done correctly, the Ryujinx console should say **"Waiting for commands"**.
