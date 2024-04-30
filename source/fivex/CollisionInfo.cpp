@@ -488,7 +488,7 @@ void CollisionInfo::serializeToObj(std::vector<u8> &outObj, std::vector<u8> &out
 
         char buf[256];
         buf[0] = '\0';
-        int len = snprintf(buf, sizeof(buf), "v %.6f %.5f %.6f\n", x, y, z);
+        int len = snprintf(buf, sizeof(buf), "v %.6f %.6f %.6f\n", x, y, z);
 
         outObj.resize(outObj.size() + len);
         memcpy(outObj.data() + outObj.size() - len, buf, len);
@@ -545,7 +545,7 @@ void CollisionInfo::serializeToObj(std::vector<u8> &outObj, std::vector<u8> &out
 
         char matId[256];
         matId[0] = '\0';
-        snprintf(matId, sizeof(matId), "%s%i", matName.c_str(), matNameUsedCnt[matName]++);
+        snprintf(matId, sizeof(matId), "%s%2i", matName.c_str(), matNameUsedCnt[matName]++);
 
         // Write Material to .obj
         writeObject(matId);

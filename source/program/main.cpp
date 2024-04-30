@@ -236,23 +236,31 @@ extern "C" void exl_main(void* x0, void* x1) {
 
     exl::hook::Initialize();
 
+    u64 targetStart = exl::util::GetMainModuleInfo().m_Total.m_Start;
+
     nn::oe::DisplayVersion gameVer;
     nn::oe::GetDisplayVersion(&gameVer);
     logF("Game Version: %s", gameVer.name);
 
-    if(strcmp(gameVer.name, "1.0.0") != 0){ // TODO: add pattern search for auto port
-        logF("This tool is currently only supported on Splatoon 3 v1.0.0!");
+    if(strcmp(gameVer.name, "1.0.0") == 0){
+        exl::patch::CodePatcher(0x3C0618C).BranchInst((void*)mainHook);
+        Phive::PhiveMeshShape::sVtable = (Phive::PhiveMeshShape::vtable*)(targetStart + 0x5745CE8);
+        hknpShapeFunctionsSingleton::sInstancePtr = (hknpShapeFunctionsSingleton**)(targetStart + 0x57DD738);
+        SetFuncPtr(hknpMeshShapeBuildArgCtor, targetStart + 0xACFC68);
+        SetFuncPtr(hknpMeshShapeBuild, targetStart + 0x99E7F0);
+        SetFuncPtr(hkGeometry::hkGeometryCtor, targetStart + 0x900818);
+    } else if(strcmp(gameVer.name, "1.1.0") == 0){
+        exl::patch::CodePatcher(0x3E7F22C).BranchInst((void*)mainHook);
+        Phive::PhiveMeshShape::sVtable = (Phive::PhiveMeshShape::vtable*)(targetStart + 0x593DF00);
+        hknpShapeFunctionsSingleton::sInstancePtr = (hknpShapeFunctionsSingleton**)(targetStart + 0x59CD618);
+        SetFuncPtr(hknpMeshShapeBuildArgCtor, targetStart + 0xA678B8);
+        SetFuncPtr(hknpMeshShapeBuild, targetStart + 0x936440);
+        SetFuncPtr(hkGeometry::hkGeometryCtor, targetStart + 0x898468);
+    } else{
+        logF("This tool is currently only supported on Splatoon 3 v1.0.0 or v1.1.0!");
         EXL_CALL_ABORT_IMPL("Unsupported version", 0);
         return;
     }
-
-    exl::patch::CodePatcher(0x3C0618C).BranchInst((void*)mainHook);
-    u64 targetStart = exl::util::GetMainModuleInfo().m_Total.m_Start;
-    Phive::PhiveMeshShape::sVtable = (Phive::PhiveMeshShape::vtable*)(targetStart + 0x5745CE8);
-    hknpShapeFunctionsSingleton::sInstancePtr = (hknpShapeFunctionsSingleton**)(targetStart + 0x57DD738);
-    SetFuncPtr(hknpMeshShapeBuildArgCtor, targetStart + 0xACFC68);
-    SetFuncPtr(hknpMeshShapeBuild, targetStart + 0x99E7F0);
-    SetFuncPtr(hkGeometry::hkGeometryCtor, targetStart + 0x900818);
 
     logF("Hooks installed!");
 
